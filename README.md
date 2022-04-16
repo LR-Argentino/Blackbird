@@ -55,3 +55,4 @@ Verwendete IDEs entweder Open Source oder als Student Lizenz
 Firebase DevKit – Privatanwender-Lizenz
 D3 Visualization Library – Open Source
 **Etc.**
+
