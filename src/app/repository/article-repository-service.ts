@@ -10,20 +10,16 @@ import {environment} from "../../environments/environment";
 })
 export class ArticleRepositoryService implements ArticleRepositoryInterface{
 
-  // TODO: Inject HttpClient
   constructor(private http: HttpClient) { }
 
-  // TODO: add fetchAllArticlesAbout logic
   fetchAllArticlesAbout(keyword: string): Observable<Article[]> {
     return this.http.get<Article[]>(environment.newsApiUrl + 'q=' + keyword + "&pageSize=100&apiKey=" + environment.API_KEY);
   }
 
-  // TODO: add fetchAllArticlesFromTo logic
   fetchAllArticlesFromTo(searchByItem:string, keyword: string, from: string, to: string): Observable<Article[]>{
     return this.http.get<Article[]>(environment.newsApiUrl + searchByItem + '=' + keyword + '&from' + '=' + from + '&to=' + to +"&apiKey=" + environment.API_KEY);
   }
 
-  // TODO: add fetchAllArticlesPublishedBy logic
   fetchAllArticlesPublishedBy(publisher: string): Observable<Article[]>  {
     return this.http.get<Article[]>(environment.newsApiUrl + 'domains=' + publisher);
   }
