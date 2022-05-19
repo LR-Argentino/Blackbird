@@ -7,7 +7,7 @@ import {Article} from "../entities/article.interface";
   providedIn: 'root'
 })
 export class ArticleService {
-
+  x: number = 10;
   constructor(private articleRepo: ArticleRepositoryService) { }
 
   // TODO: Implement ArticleRepository methods
