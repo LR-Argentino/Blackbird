@@ -1,0 +1,30 @@
+<nz-table #basicTable [nzData]="data" nzBordered [nzSize]="'small'" >
+  <thead>
+  <tr>
+    <th>Search</th>
+    <th>From/To</th>
+    <th>Sort by</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td class="test">
+      <input nz-input placeholder="Search by topic" [(ngModel)]="value" />
+    </td>
+    <td>
+      <nz-range-picker [nzShowTime]="false" [(ngModel)]="date" (ngModelChange)="onChange($event)"></nz-range-picker>
+    </td>
+    <td>
+      <button nz-button nzType="primary">
+        <i nz-icon nzType="search"></i>
+        Search
+      </button>
+    </td>
+  </tr>
+  <tr *ngFor="let data of basicTable.data">
+    <td>{{data.userId}}</td>
+    <td>{{data.title}}</td>
+    <td></td>
+  </tr>
+  </tbody>
+</nz-table>
